@@ -1,3 +1,30 @@
+About Motobai
+Motobai is a small, independent business specializing in high-quality motor parts, with a particular focus on oils and lubricants essential for engine health and performance. We aim to provide reliable, accessible, and affordable automotive products for individuals, workshops, and businesses alike.
+
+This application is built to streamline our operations and improve customer experience. Developed using React for the frontend and Django for the backend, the Motobai app allows users to browse our product offerings, manage orders, and stay updated with the latest stock and pricing — all in one place.
+
+At Motobai, we combine technical reliability with personalized service, keeping vehicles running smoothly one drop at a time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INSTALLATION:
+
 Important stuff that should be installed first if may errors na missing: (google niyo lng)
 1. node.js
 2. vscode
