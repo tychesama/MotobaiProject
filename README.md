@@ -1,4 +1,6 @@
-About Motobai
+About Motobai.
+
+
 Motobai is a small, independent business focused on selling motor parts — with a strong emphasis on oils and lubricants that keep engines running at peak performance. Our goal is to provide dependable, accessible automotive supplies for local workshops and internal operations.
 
 This internal-use application is built to support and streamline Motobai’s day-to-day workflows. Designed for use by our employees, it offers an efficient and user-friendly interface for managing inventory, tracking orders, and monitoring product data.
@@ -28,10 +30,15 @@ At Motobai, we believe that a well-oiled system is just as important as a well-o
 .
 .
 .
+
 .
+
 .
+
 .
+
 .
+
 .
 
 .
