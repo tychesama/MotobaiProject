@@ -1,0 +1,9 @@
+{
+  "build": {
+    "builder": "NIXPACKS"
+  },
+  "deploy": {
+    "startCommand": "gunicorn backend.wsgi --log-file -",
+    "restartPolicyType": "ON_FAILURE"
+  }
+}
