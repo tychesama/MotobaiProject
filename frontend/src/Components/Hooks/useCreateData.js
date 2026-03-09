@@ -11,7 +11,7 @@ export function useCreateData() {
     successMessage,
     toggleModal
   ) => {
-    const url = `http://127.0.0.1:8000/api/${info}/create/`;
+    const url = `/api/${info}/create/`;
     // Show confirmation dialog before proceeding
     const result = await Swal.fire({
       customClass: { container: "create-swal" },

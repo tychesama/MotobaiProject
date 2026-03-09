@@ -11,7 +11,7 @@ export function useFetchData(info) {
   useEffect(() => {
     const fetchInfo = async () => {
       try {
-        const url = `http://127.0.0.1:8000/api/${info}/list`;
+        const url = `/api/${info}/list`;
         const formattedUrl = url.endsWith("/") ? url : `${url}/`;
 
         const response = await fetch(formattedUrl, {

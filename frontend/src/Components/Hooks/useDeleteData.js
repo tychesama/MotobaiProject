@@ -14,7 +14,7 @@ export function useDeleteData(info, dataID) {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const url = `http://127.0.0.1:8000/api/${info}/soft_delete/${dataID}`;
+          const url = `/api/${info}/soft_delete/${dataID}`;
           const formattedUrl = url.endsWith("/") ? url : `${url}/`;
 
           const res = await api.put(formattedUrl, {

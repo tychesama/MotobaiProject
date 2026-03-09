@@ -12,7 +12,7 @@ export function useUpdateData() {
     successMessage,
     toggleModal
   ) => {
-    const url = `http://127.0.0.1:8000/api/${info}/update/${id}/`;
+    const url = `/api/${info}/update/${id}/`;
     // Show confirmation dialog before proceeding
     const result = await Swal.fire({
       title: `Are you sure you want to edit this data?`,
