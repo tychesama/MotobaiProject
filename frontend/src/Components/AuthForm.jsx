@@ -38,7 +38,7 @@ function Form({ route, method }) {
         }).then((result) => {
           navigate("/login");
         });
-        
+
       }
     } catch (error) {
       Swal.fire({
@@ -91,6 +91,29 @@ function Form({ route, method }) {
                 >
                   {name}
                 </button>
+              </div>
+              <div className="flex justify-center mt-4">
+                {method === "login" ? (
+                  <p className="text-sm">
+                    Don't have an account?{" "}
+                    <span
+                      className="text-red-700 cursor-pointer hover:underline"
+                      onClick={() => navigate("/register")}
+                    >
+                      Register
+                    </span>
+                  </p>
+                ) : (
+                  <p className="text-sm">
+                    Already have an account?{" "}
+                    <span
+                      className="text-red-700 cursor-pointer hover:underline"
+                      onClick={() => navigate("/login")}
+                    >
+                      Login
+                    </span>
+                  </p>
+                )}
               </div>
             </div>
           </form>
