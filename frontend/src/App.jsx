@@ -15,26 +15,79 @@ import Employees from "./Components/Pages/Employees/Employees";
 import NotFound from "./Components/Pages/NotFound/NotFound";
 import { Route, Routes } from "react-router-dom";
 import Container from "./Components/Container.jsx";
+import ProtectedRoute from "./Components/ProtectedRoute";
 
 function App() {
+  const token = localStorage.getItem(ACCESS_TOKEN);
   return (
     <>
       <Container>
-        <Header />
+        {token && <Header />}
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/accounts" element={<Accounts />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/suppliers" element={<Suppliers />} />
-          <Route path="/employees" element={<Employees />} />
-          <Route path="/inventory" element={<Inventory />} />
-          <Route path="/orders" element={<Orders />} />
-          <Route path="/orderList" element={<OrderHistory />} />
-          <Route path="/walkIn" element={<WalkIn />} />
-          <Route path="/stockinlogs" element={<StockLogs />} />
-          <Route path="/stockoutlogs" element={<StockOutLogs />} />
-          <Route path="/" element={<Accounts />} />
+
+          <Route path="/accounts" element={
+            <ProtectedRoute>
+              <Accounts />
+            </ProtectedRoute>
+          } />
+
+          <Route path="/products" element={
+            <ProtectedRoute>
+              <Products />
+            </ProtectedRoute>
+          } />
+
+          <Route path="/suppliers" element={
+            <ProtectedRoute>
+              <Suppliers />
+            </ProtectedRoute>
+          } />
+
+          <Route path="/employees" element={
+            <ProtectedRoute>
+              <Employees />
+            </ProtectedRoute>
+          } />
+
+          <Route path="/inventory" element={
+            <ProtectedRoute>
+              <Inventory />
+            </ProtectedRoute>
+          } />
+
+          <Route path="/orders" element={
+            <ProtectedRoute>
+              <Orders />
+            </ProtectedRoute>
+          } />
+
+          <Route path="/orderList" element={
+            <ProtectedRoute>
+              <OrderHistory />
+            </ProtectedRoute>
+          } />
+
+          <Route path="/walkIn" element={
+            <ProtectedRoute>
+              <WalkIn />
+            </ProtectedRoute>
+          } />
+
+          <Route path="/stockinlogs" element={
+            <ProtectedRoute>
+              <StockLogs />
+            </ProtectedRoute>
+          } />
+
+          <Route path="/stockoutlogs" element={
+            <ProtectedRoute>
+              <StockOutLogs />
+            </ProtectedRoute>
+          } />
+
+          <Route path="/" element={<Navigate to="/accounts" />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
