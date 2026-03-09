@@ -13,9 +13,10 @@ import Register from "./Components/Pages/Authentication/Register.jsx";
 import Suppliers from "./Components/Pages/Suppliers/Suppliers";
 import Employees from "./Components/Pages/Employees/Employees";
 import NotFound from "./Components/Pages/NotFound/NotFound";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Container from "./Components/Container.jsx";
 import ProtectedRoute from "./Components/ProtectedRoute";
+import { ACCESS_TOKEN } from "./constants";
 
 function App() {
   const token = localStorage.getItem(ACCESS_TOKEN);
