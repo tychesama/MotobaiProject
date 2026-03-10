@@ -16,14 +16,12 @@ import NotFound from "./Components/Pages/NotFound/NotFound";
 import { Route, Routes, Navigate } from "react-router-dom";
 import Container from "./Components/Container.jsx";
 import ProtectedRoute from "./Components/ProtectedRoute";
-import { ACCESS_TOKEN } from "./constants";
 
 function App() {
-  const token = localStorage.getItem(ACCESS_TOKEN);
   return (
     <>
       <Container>
-        {token && <Header />}
+        <Header />
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
